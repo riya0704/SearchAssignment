@@ -1,0 +1,45 @@
+.App {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 1.2rem;
+  color: #999;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px;
+}
+
+.loading::before {
+  content: '⏳';
+  display: block;
+  font-size: 4rem;
+  margin-bottom: 15px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+}
+
